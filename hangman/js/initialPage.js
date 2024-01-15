@@ -1,5 +1,21 @@
 const path = new URL("../images/gallows.svg", import.meta.url);
 
+let svgString = null;
+async function fetchSVG() {
+	try {
+		const response = await fetch(path);
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`);
+		}
+
+		const result = await response.text();
+		svgString = result.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
+	} catch (error) {
+		console.error("Помилка при отриманні SVG:", error);
+	}
+}
+
 const generateKeyboard = () => {
 	let result = "";
 	for (let i = 65; i <= 90; i += 1) {
@@ -10,13 +26,13 @@ const generateKeyboard = () => {
 	return result;
 };
 
-export const initialPage = () => {
+export const initialPage = async () => {
+	await fetchSVG();
+
 	return `
   <div class="canvas">
     <div class="hangman">
-      <svg class="hangman__svg" width="372" height="581" aria-label="the image of the hangman">
-        <use href="${path.toString()}"></use>
-      </svg>
+      ${svgString}
       <h1 class="hangman__title">HANGMAN GAME</h1>
     </div>
 

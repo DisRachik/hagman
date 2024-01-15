@@ -1,11 +1,11 @@
 <svg width="380" height="589" viewBox="0 0 380 589" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_0_6)">
-<rect x="306" y="379.19" width="5" height="100" transform="rotate(-39.6353 306 379.19)" fill="black"/>
-<rect x="306.796" y="376" width="5" height="100" transform="rotate(39.64 306.796 376)" fill="black"/>
-<rect x="308" y="250.19" width="5" height="100" transform="rotate(-39.6353 308 250.19)" fill="black"/>
-<rect x="303.796" y="247" width="5" height="100" transform="rotate(39.64 303.796 247)" fill="black"/>
-<rect x="306" y="249" width="5" height="131" fill="black"/>
-<circle cx="306.5" cy="198.5" r="48" fill="white" stroke="black" stroke-width="5"/>
+<rect id='body-6' class='hangman__svg--visible' x="306" y="379.19" width="5" height="100" transform="rotate(-39.6353 306 379.19)" fill="black"/>
+<rect id='body-5' x="306.796" y="376" width="5" height="100" transform="rotate(39.64 306.796 376)" fill="black"/>
+<rect id='body-4' x="308" y="250.19" width="5" height="100" transform="rotate(-39.6353 308 250.19)" fill="black"/>
+<rect id='body-3' x="303.796" y="247" width="5" height="100" transform="rotate(39.64 303.796 247)" fill="black"/>
+<rect id='body-2' x="306" y="249" width="5" height="131" fill="black"/>
+<circle id='body-1' class='hangman__svg--visible' cx="306.5" cy="198.5" r="48" stroke="black" stroke-width="5"/>
 <rect x="180.337" y="34.6662" width="39" height="199.598" transform="rotate(45 180.337 34.6662)" fill="black" stroke="#FFFEFE" stroke-width="3"/>
 <rect x="38.5" y="1.5" width="39" height="578" rx="3.5" fill="black" stroke="#FFFEFE" stroke-width="3"/>
 <rect x="355.5" y="34.5" width="39" height="350" rx="3.5" transform="rotate(90 355.5 34.5)" fill="black" stroke="#FFFEFE" stroke-width="3"/>

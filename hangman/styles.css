@@ -1,5 +1,33 @@
 body {
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	background-color: #0fa4b4;
+}
+
+li {
+	list-style: none;
+}
+
+.canvas {
+	padding: 60px 40px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	background-color: #f4f4f4;
+}
+
+.hangman {
+	text-align: center;
+}
+
+.hangman__svg {
+	display: block;
+}
+.hangman__svg--visible {
+	fill: #0fa4b4;
+	stroke: #0fa4b4;
 }
