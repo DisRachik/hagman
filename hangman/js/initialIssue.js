@@ -20,8 +20,8 @@ const renderPuzzle = question => {
 
 	wordWrapEl.innerHTML = [...word]
 		.map(
-			letter => `<li>
-	  <span data-letter="${letter.toUpperCase()}">${letter.toUpperCase()}</span>
+			letter => `<li class="puzzle__letter" data-letter="${letter.toUpperCase()}">
+	  <span>${letter.toUpperCase()}</span>
 	</li>`,
 		)
 		.join("");

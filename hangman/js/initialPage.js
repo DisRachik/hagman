@@ -38,8 +38,8 @@ export const initialPage = async () => {
 
     <div class="puzzle">
       <ul class="puzzle__word"></ul>
-      <p class="puzzle__hint">Hint: <span  class="puzzle__question"></span></p>
-      <p class="puzzle__mistake">Incorrect guesses: <span  class="puzzle__counter-mistake"></span></p>
+      <p class="puzzle__hint">Hint: <span class="puzzle__question"></span></p>
+      <p class="puzzle__mistake">Incorrect guesses: <span class="puzzle__counter-mistake"></span></p>
       <div class="keyboard" aria-label="keyboard">${generateKeyboard()}</div>
     </div>
   </div>
