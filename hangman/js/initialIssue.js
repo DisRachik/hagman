@@ -1,12 +1,11 @@
+import { gameConstants } from "./gameConstants.js";
 import { questionsData } from "./questionsData.js";
 
-const MAX_MISTAKE = 6;
-let mistakeCounter = 0;
-const issueList = [];
+const getRandomElement = length => Math.floor(Math.random() * length);
 
-const getRandomElement = length => {
-	console.log("length", length);
-	return Math.floor(Math.random() * length);
+export const renderMistakeCounter = () => {
+	const counterEl = document.querySelector(".puzzle__counter-mistake");
+	counterEl.textContent = `${gameConstants.mistakeCounter} / ${gameConstants.MAX_MISTAKE}`;
 };
 
 const renderPuzzle = question => {
@@ -14,28 +13,29 @@ const renderPuzzle = question => {
 
 	const wordWrapEl = document.querySelector(".puzzle__word");
 	const questionEl = document.querySelector(".puzzle__question");
-	const counterEl = document.querySelector(".puzzle__counter-mistake");
 
 	console.log("currentWord - ", word);
 
-	wordWrapEl.innerHTML = [...word]
+	gameConstants.currentWordArray = [...word.toUpperCase()];
+
+	wordWrapEl.innerHTML = gameConstants.currentWordArray
 		.map(
-			letter => `<li class="puzzle__letter" data-letter="${letter.toUpperCase()}">
-	  <span>${letter.toUpperCase()}</span>
+			letter => `<li class="puzzle__letter" data-letter="${letter}">
+	  <span>${letter}</span>
 	</li>`,
 		)
 		.join("");
 
 	questionEl.textContent = hint;
-	counterEl.textContent = `${mistakeCounter} / ${MAX_MISTAKE}`;
+	renderMistakeCounter();
 };
 
 export const initialIssue = () => {
-	if (!issueList.length) {
-		issueList.push(...questionsData);
+	if (!gameConstants.issueList.length) {
+		gameConstants.issueList.push(...questionsData);
 	}
 
-	const [newIssue] = issueList.splice(getRandomElement(issueList.length), 1);
+	const [newIssue] = gameConstants.issueList.splice(getRandomElement(gameConstants.issueList.length), 1);
 
 	renderPuzzle(newIssue);
 };

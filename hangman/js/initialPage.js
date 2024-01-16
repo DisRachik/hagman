@@ -43,5 +43,12 @@ export const initialPage = async () => {
       <div class="keyboard" aria-label="keyboard">${generateKeyboard()}</div>
     </div>
   </div>
+
+  <div class="backdrop backdrop--is-hidden">
+    <div class="modal">
+      <img class="modal__img" src="" alt="">
+      <button class="modal__btn" type="button"></button>
+    </div>
+  </div>
   `;
 };
