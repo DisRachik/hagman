@@ -46,8 +46,8 @@ export const initialPage = async () => {
 
   <div class="backdrop backdrop--is-hidden">
     <div class="modal">
-      <img class="modal__img" src="" alt="">
-      <button class="modal__btn" type="button"></button>
+      <div class="modal__img"></div>
+      <button class="modal__btn" type="button">Next game</button>
     </div>
   </div>
   `;
