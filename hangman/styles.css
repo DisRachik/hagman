@@ -11,6 +11,11 @@ body {
 li {
 	list-style: none;
 }
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
 
 .canvas {
 	padding: 60px 40px;
@@ -107,14 +112,25 @@ li {
 	cursor: pointer;
 	outline: none;
 	border: none;
-	transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition:
+		background-color 400ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .keyboard__letter:hover {
-	background-color: rgb(100, 136, 149);
+	background-color: #648895;
+	box-shadow:
+		-5px -5px 9px rgba(255, 255, 255, 0.45),
+		5px 5px 9px rgba(94, 104, 121, 0.3);
 }
 .keyboard__letter:disabled {
-	background-color: rgba(128, 128, 128, 0.6);
+	background-color: rgba(128, 128, 128, 0);
 	pointer-events: none;
+	color: #648895;
+
+	box-shadow:
+		inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+		inset 5px 5px 9px rgba(94, 104, 121, 0.3);
 }
 
 .backdrop {
@@ -143,11 +159,41 @@ li {
 }
 
 .modal {
-	padding: 60px 40px;
+	padding: 20px 10px;
 
 	background-color: #f6f6f6;
 	border-radius: 40px;
 
 	transform: scale(1, 1);
 	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__img {
+	/* width: 300px; */
+}
+
+.modal__btn {
+	margin-top: 20px;
+	padding: 10px;
+
+	font-weight: 700;
+	color: #5e6879;
+	border: 1px solid #5e6879;
+	border-radius: 15px;
+
+	transition: box-shadow 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__btn:hover {
+	color: #0f2027;
+	border-color: transparent;
+	box-shadow:
+		-5px -5px 9px rgba(255, 255, 255, 0.45),
+		5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+.modal__btn:active {
+	color: #15e38a;
+	border-color: transparent;
+	box-shadow:
+		inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+		inset 5px 5px 9px rgba(94, 104, 121, 0.3);
 }
