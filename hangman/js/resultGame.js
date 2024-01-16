@@ -6,11 +6,13 @@ const pathLost = new URL("../images/gameover.png", import.meta.url);
 export const resultGame = isWin => {
 	const backdropEl = document.querySelector(".backdrop");
 	const imageEl = document.querySelector(".modal__img");
+	const titleEl = document.querySelector(".modal__current-word");
 	const buttonEl = document.querySelector(".modal__btn");
 	const keyboardEl = document.querySelectorAll(".keyboard__letter");
 
 	backdropEl.classList.remove("backdrop--is-hidden");
 	imageEl.innerHTML = `<img src=${isWin ? pathWin : pathLost} alt=${isWin ? "You-are-awesome" : "Game-over"}>`;
+	titleEl.textContent = gameConstants.currentWord;
 
 	const onClick = () => {
 		backdropEl.classList.add("backdrop--is-hidden");
@@ -21,6 +23,7 @@ export const resultGame = isWin => {
 		}
 		gameConstants.currentWordArray = [];
 		gameConstants.mistakeCounter = 0;
+		gameConstants.currentWord = "";
 		initialIssue();
 
 		buttonEl.removeEventListener("click", onClick);

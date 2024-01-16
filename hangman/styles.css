@@ -172,6 +172,10 @@ img {
 	/* width: 300px; */
 }
 
+.modal__current-word {
+	color: #a43535;
+}
+
 .modal__btn {
 	margin-top: 20px;
 	padding: 10px;

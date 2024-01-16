@@ -47,7 +47,8 @@ export const initialPage = async () => {
   <div class="backdrop backdrop--is-hidden">
     <div class="modal">
       <div class="modal__img"></div>
-      <button class="modal__btn" type="button">Next game</button>
+      <h2 class="modal__title">Secret word: <span class="modal__current-word"></span></h2>
+      <button class="modal__btn" type="button">Play again</button>
     </div>
   </div>
   `;

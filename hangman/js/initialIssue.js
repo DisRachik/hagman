@@ -17,6 +17,7 @@ const renderPuzzle = question => {
 	console.log("currentWord - ", word);
 
 	gameConstants.currentWordArray = [...word.toUpperCase()];
+	gameConstants.currentWord = word.toUpperCase();
 
 	wordWrapEl.innerHTML = gameConstants.currentWordArray
 		.map(
