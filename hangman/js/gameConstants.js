@@ -3,5 +3,6 @@ export const gameConstants = {
 	mistakeCounter: 0,
 	currentWord: "",
 	currentWordArray: [],
+	selectLetter: [],
 	issueList: [],
 };

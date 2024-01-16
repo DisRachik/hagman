@@ -7,6 +7,7 @@ export const selectLetter = letter => {
 	const puzzleLettersEl = document.querySelectorAll(".puzzle__letter");
 
 	[...keyboardEl].find(item => item.textContent === letter).disabled = true;
+	gameConstants.selectLetter.push(letter);
 
 	const checkLetterInWord = gameConstants.currentWordArray.filter(item => item !== letter);
 	if (checkLetterInWord.length === gameConstants.currentWordArray.length) {

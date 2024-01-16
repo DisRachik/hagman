@@ -24,6 +24,7 @@ export const resultGame = isWin => {
 		gameConstants.currentWordArray = [];
 		gameConstants.mistakeCounter = 0;
 		gameConstants.currentWord = "";
+		gameConstants.selectLetter = [];
 		initialIssue();
 
 		buttonEl.removeEventListener("click", onClick);
