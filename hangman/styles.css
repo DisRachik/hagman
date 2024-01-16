@@ -1,5 +1,6 @@
 body {
 	min-height: 100vh;
+	padding: 15px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,7 +9,8 @@ body {
 	background-color: #0fa4b4;
 }
 
-li {
+ul {
+	padding-left: 0;
 	list-style: none;
 }
 img {
@@ -18,21 +20,51 @@ img {
 }
 
 .canvas {
-	padding: 60px 40px;
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
+	max-width: 95%;
+	padding: 10px;
 
 	background-color: #f4f4f4;
 	border-radius: 40px;
 }
+@media (min-width: 660px) {
+	.canvas {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 20px;
+	}
+}
+@media (min-width: 768px) {
+	.canvas {
+		max-width: 90%;
+		padding: 60px 40px;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 20px;
+	}
+}
 
 .hangman {
+	width: 260px;
+	margin: 0 auto;
 	text-align: center;
+}
+@media (min-width: 360px) {
+	.hangman {
+		width: 300px;
+	}
+}
+@media (min-width: 660px) {
+	.hangman {
+		width: 31.9%;
+	}
 }
 
 .hangman__svg {
 	display: block;
+	width: 100%;
+	height: auto;
 }
 .hangman__svg--visible {
 	fill: #000;
@@ -40,6 +72,7 @@ img {
 }
 
 .puzzle {
+	width: 100%;
 	padding: 40px 10px;
 	display: flex;
 	flex-direction: column;
@@ -48,6 +81,11 @@ img {
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 500;
+}
+@media (min-width: 660px) {
+	.puzzle {
+		width: 65%;
+	}
 }
 
 .puzzle__word {
@@ -159,6 +197,7 @@ img {
 }
 
 .modal {
+	max-width: 80%;
 	padding: 20px 10px;
 
 	background-color: #f6f6f6;
